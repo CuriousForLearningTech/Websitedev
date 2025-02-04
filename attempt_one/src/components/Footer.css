@@ -1,0 +1,57 @@
+/* components/Footer.css (Create this file) */
+.footer {
+  animation: fadeInUp 1s ease; /* Add animation */
+}
+
+.footer-logo {
+  animation: bounceIn 1s ease; /* Add logo animation */
+}
+
+.footer-icon {
+  font-size: 1.5rem; /* Adjust icon size */
+  margin: 0 0.5rem; /* Add spacing between icons */
+  transition: transform 0.3s ease; /* Add hover transition */
+}
+
+.footer-icon:hover {
+  transform: scale(1.2); /* Scale up on hover */
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  40% {
+    opacity: 1;
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  70% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}

@@ -1,0 +1,53 @@
+/* Features.css */
+.features .tree ul {
+  padding: 0;
+  margin: 0;
+}
+
+.features .tree li {
+  position: relative;
+  padding-left: 40px; /* Increased indentation */
+  margin-bottom: 15px; /* Increased margin */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.features .tree li::before {
+  content: "";
+  position: absolute;
+  top: 10px; /* Adjusted top position */
+  bottom: 10px; /* Adjusted bottom position */
+  left: 20px;
+  border-left: 2px solid #ccc;
+}
+
+.features .tree li:last-child::before {
+  display: none;
+}
+
+.features .feature-item {
+  /* Style the feature container */
+  display: flex; /* Use flexbox for alignment */
+  align-items: flex-start; /* Align items to the top */
+}
+
+/* Animation */
+.features .tree {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.features .tree.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .features .tree li {
+    padding-left: 20px; /* Reduced indentation on smaller screens */
+  }
+
+  .features .tree li::before {
+    left: 10px; /* Adjusted line position */
+  }
+}
